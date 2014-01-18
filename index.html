@@ -3,16 +3,19 @@
 	<head>
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
 	</head>
 	<body>
 		<div id="page-container">
 			<div id="dashboard">
 				<div id="profile-summary">
 					<div class="content">
-						<img class='avatar' src='img/alagoon.jpg' />
-						<p>Your Name Here</p>
+						<img class='avatar' data-toggle="tooltip" src='img/alagoon.jpg' />
+						<p class="profile-name">Ryan Comte</p>
 					</div>
 				</div>
 				<div id="tweet-content">
@@ -43,16 +46,21 @@
 					<!-- HINT: jQuery ".prepend" method -->
 					<div class="tweet">
 						<div class="content">
-							<img class="avatar" src="img/damenleeturks.jpg" />
-							<strong class="fullname">My BFF</strong>
-							<span class="username">@mybff</span>
+                            <div class="top-content">
+                                <img class="avatar" data-toggle="tooltip" src="img/damenleeturks.jpg" />
+                                <strong class="fullname">My BFF</strong>
+                                <span class="username">@mybff</span>
+                                <span class="icon action-retweet"></span>
+                                <span class="icon action-favorite"></span>
+                                <span class="icon action-combined"></span>
 
-							<!-- BLACK DIAMOND: Implement the icons for when a tweet is favorited/retweeted in the upper right of the tweet. -->
-							<!-- HINT: Add to what you created in Step 5 -->
-							<p class="tweet-text">Today is an amazing day.</p>
+                                <!-- BLACK DIAMOND: Implement the icons for when a tweet is favorited/retweeted in the upper right of the tweet. -->
+                                <!-- HINT: Add to what you created in Step 5 -->
+                                <p class="tweet-text">Today is an amazing day.</p>
 
-							<!-- STEP 6: The tweet actions below should only show up when you hover over the tweet. Otherwise, they should be hidden. -->
-							<!-- HINT: CSS ":hover" pseudo element -->
+                                <!-- STEP 6: The tweet actions below should only show up when you hover over the tweet. Otherwise, they should be hidden. -->
+                                <!-- HINT: CSS ":hover" pseudo element -->
+                            </div>
 							<div class="tweet-actions">
 								<ul>
 									<li><span class="icon action-reply"></span> Reply</li>
@@ -98,11 +106,13 @@
 
 					<div class="tweet">
 						<div class="content">
-							<img class="avatar" src="img/funwatercat.jpg" />
-							<strong class="fullname">The Onion</strong>
-							<span class="username">@theonion</span>
-							<p class="tweet-text">“I'm able to speak confidently about a wide range of subjects, so it’s probably hard for most women to follow.” http://onion.com/1aWfKwf </p>
-							<div class="tweet-actions">
+							<div class="top-content">
+                                <img class="avatar" data-toggle="tooltip" src="img/funwatercat.jpg" />
+                                <strong class="fullname">The Onion</strong>
+                                <span class="username">@theonion</span>
+                                <p class="tweet-text">“I'm able to speak confidently about a wide range of subjects, so it’s probably hard for most women to follow.” http://onion.com/1aWfKwf </p>
+                            </div>
+                            <div class="tweet-actions">
 								<ul>
 									<li><span class="icon action-reply"></span> Reply</li>
 									<li><span class="icon action-retweet"></span> Retweet</li>
@@ -138,17 +148,19 @@
 
 					<div class="tweet">
 						<div class="content">
-							<img class="avatar" src="img/jennyshen.jpg" />
-							<strong class="fullname">Harvard Biz Review</strong>
-							<span class="username">@HarvardBiz</span>
-							<p class="tweet-text">It is possible to work with a loved one without ruining the relationship http://s.hbr.org/15FDIri </p>
-							<div class="tweet-actions">
-								<ul>
-									<li><span class="icon action-reply"></span> Reply</li>
-									<li><span class="icon action-retweet"></span> Retweet</li>
-									<li><span class="icon action-favorite"></span> Favorite</li>
-									<li><span class="icon action-more"></span> More</li>
-								</ul>
+                            <div class="top-content">
+                                <img class="avatar" data-toggle="tooltip" src="img/jennyshen.jpg" />
+                                <strong class="fullname">Harvard Biz Review</strong>
+                                <span class="username">@HarvardBiz</span>
+                                <p class="tweet-text">It is possible to work with a loved one without ruining the relationship http://s.hbr.org/15FDIri </p>
+							</div>
+                            <div class="tweet-actions">
+                                <ul>
+                                    <li><span class="icon action-reply"></span> Reply</li>
+                                    <li><span class="icon action-retweet"></span> Retweet</li>
+                                    <li><span class="icon action-favorite"></span> Favorite</li>
+                                    <li><span class="icon action-more"></span> More</li>
+                                </ul>
 							</div>
 							<div class="stats">
 								<div class="retweets">

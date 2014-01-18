@@ -68,7 +68,7 @@ body {
 
 /* PAGE STRUCTURE */
 #page-container {
-	padding: 54px 14px 15px;
+	padding: 54px 0 15px;
 	margin: 0 auto;
 	width: 837px;
 }
@@ -146,6 +146,11 @@ body {
 	border-bottom: 1px solid #e8e8e8;
 	min-height: 60px;
 	border-radius: 6px;
+    position: relative;
+}
+
+.tweet:hover .tweet-actions {
+    display: block;
 }
 
 	.tweet .avatar {
@@ -168,6 +173,7 @@ body {
 
 	.tweet-actions {
 		text-align: right;
+        display:none;
 	}
 		.tweet-actions ul {
 			list-style-type: none;
@@ -258,5 +264,36 @@ body {
 				top: 0;
 				left: 0;
 			}
+
+
+
+.new-height {
+    height: 200px;
+}
+
+.top-content .action-retweet, .top-content .action-favorite, .top-content .action-combined{
+    display: none;
+    float: right;
+    margin-right: 10px;
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 24px;
+    height: 28px;
+}
+
+.top-content .action-combined{
+    background-position: -60px -450px;
+}
+
+.top-content .action-favorite{
+    background-position: -30px -450px;
+}
+
+.top-content .action-retweet{
+    background-position: 0px -450px;
+}
+
 
 
