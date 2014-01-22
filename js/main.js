@@ -7,11 +7,9 @@ $(function(){
     var reply = $('.reply');
     var retweetSelected = false;
     var favoriteSelected = false;
+    var nameSrc = $('.profile-name').text();
 
-
-    $('.avatar').tooltip({
-            title: $(this).find('.fullname').text()
-        });
+    $('.avatar').tooltip({title: nameSrc});
 
 
 
@@ -56,6 +54,7 @@ $(function(){
 
     $(button).on('click', function(){
         var tweetData = $(newTweet).val();
+        var titleAttr = $('.profile-summary .avatar').attr('title', nameSrc);
         var pictureSrc = $('.avatar').first().attr('src');
         var nameSrc = $('.profile-name').text();
         var newDiv = $('.tweet').eq(0).clone();
@@ -78,10 +77,9 @@ $(function(){
         var favorite = $(this).find('span').hasClass('action-favorite');
         if(!retweetSelected && !favoriteSelected){
             if(retweet){
-                $('.top-content .action-retweet').css('display', 'inline-block');
+                $(this).closest(find('.top-content .action-retweet').css('display', 'inline-block');
                 retweetSelected = true;
             }else if(favorite){
-                console.log('testing');
                 $('.top-content .action-favorite').css('display', 'inline-block');
                 favoriteSelected = true;
             }

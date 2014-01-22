@@ -283,9 +283,7 @@ body {
     height: 28px;
 }
 
-.top-content .action-combined{
-    background-position: -60px -450px;
-}
+
 
 .top-content .action-favorite{
     background-position: -30px -450px;
@@ -293,6 +291,10 @@ body {
 
 .top-content .action-retweet{
     background-position: 0px -450px;
+}
+
+.top-content .action-combined{
+    background-position: -60px -450px;
 }
 
 
